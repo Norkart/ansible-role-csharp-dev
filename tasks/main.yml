@@ -1,2 +1,16 @@
 ---
-# tasks file for ansible-role-csharp-dev
+- apt_key:
+    keyserver: hkp://keyserver.ubuntu.com:80
+    id: 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+    state: present
+
+
+- apt_repository:
+    repo: deb http://download.mono-project.com/repo/debian wheezy main
+    state: present
+
+- apt_repository:
+    repo: deb http://download.mono-project.com/repo/debian wheezy-apache24-compat main
+    state: present
+
+- apt: update_cache=yes
