@@ -1,0 +1,2 @@
+
+- get_url: url=https://download.jetbrains.com/resharper/riderRS-171.3085.362.tar.gz dest=/opt 
